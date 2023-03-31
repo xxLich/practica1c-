@@ -1,0 +1,183 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+/*
+Hacer un programa para ingresar por teclado la cantidad de horas trabajadas por un operario y el valor que se le paga
+por hora trabajada y listar por pantalla el sueldo que le corresponda.
+
+
+    int CANTHORAS, VALORHORA, sueldo;
+    cout<<"Ingresar el cantidad de horas trabajadas";
+    cin >> CANTHORAS;
+    cout<<"Ingresar valor de hora";
+    cin >> VALORHORA;
+    sueldo = CANTHORAS*VALORHORA;
+    cout<< sueldo;
+Hacer un programa que solicite por teclado que se ingresen dos números y luego guardarlos en dos variables distintas. A continuación se deben
+intercambiar mutuamente los valores en ambas variables y mostrarlos por pantalla.
+Ejemplo: Suponiendo que se ingresan 3 y 8 como valores y que la variables usadas son A y B, entonces A=3 y B=8, pero luego debe quedar A=8 y B=3.
+
+
+int a,b,aux;
+cout<< "ingresar un numero";
+cin>> a;
+cout<< "ingresar un numero";
+cin>> b;
+
+aux = a;
+a = b;
+b= aux;
+cout<< a <<endl;
+cout<<b<<endl;
+
+Una concesionaria de autos paga a los vendedores un sueldo fijo de $ 15.000 más $ 2.000 de premio por cada auto vendido.
+Hacer un programa que permita ingresar por teclado la cantidad de autos vendidos por un vendedor y luego informar por pantalla el sueldo total a pagar.
+Ejemplo. Si la cantidad de autos vendidos fuera 4 entonces el sueldo total a pagar es de $ 23.000.
+
+
+int cantautos,sueldofinal;
+
+cout<<"Ingresar cantidad de autos";
+cin>>cantautos;
+sueldofinal = 15000 * cantautos;
+cout<<sueldofinal<<endl;
+
+Hacer un programa para ingresar por teclado la cantidad de asientos disponibles en un avión y la cantidad de pasajes ocupados y luego calcular e informar
+el porcentaje de ocupación y el porcentaje de no ocupación del mismo.
+Ejemplo si el avión tiene 200 asientos disponibles y se vendieron 80 pasajes, el porcentaje de ocupación que se informará será de un 40% y el porcentaje de no ocupación será de un 60%.
+
+
+int asientosdisponibles,asientosocupados,desocupados,ocupados;
+cout<<"Ingresar asientos disponibles";
+cin>> asientosdisponibles;
+cout<<"Ingresar asientos ocupados";
+cin>> asientosocupados;
+ocupados = (asientosocupados/asientosdisponibles) * 100;
+desocupados = (asientosdisponibles/asientosocupados)* 100;
+cout<< ocupados<<endl;
+cout<< desocupados<<endl;
+
+
+Un comercio vende tres marcas de alfajores distintas A, B y C. Hacer un programa para ingresar por teclado la cantidad de alfajores vendidos de cada una de las tres marcas
+y luego se informe el porcentaje de ventas para cada una de ellas.
+
+Ejemplo. Si se ingresa 100, 25 y 75 como cantidades vendidas entonces el programa calculará e informará A: 50%, B: 12,50% y C: 37,50%.
+
+float a,b,c, total,porcentajea,porcentajeb,porcentajec;
+
+cout<<"alfajor 1";
+cin>> a;
+cout<<"alfajor 2";
+cin>> b;
+cout<< "alfajor 3";
+cin>> c;
+total = a+b+c;
+porcentajea = 100*(a/total);
+porcentajeb = 100*(b/total);
+porcentajec = 100*(c/total);
+
+cout<<porcentajea<<endl;
+cout<<porcentajeb<<endl;
+cout<<porcentajec<<endl;
+
+
+float importev, descuento,total,porcentaje;
+cout<<"ingresar importe venta";
+cin>> importev;
+cout<<"ingresar descuento";
+cin>> descuento;
+porcentaje = (importev*descuento)/100;
+total = importev - porcentaje;
+cout<<total<<endl;
+
+float ventasindescuento,ventacondescuento,descuentoaplicado;
+int cantdescuento;
+cout<<"valor venta sin descuento";
+cin>>ventasindescuento;
+cout<<"valor con descuento";
+cin>>ventacondescuento;
+
+cantdescuento = ventasindescuento-ventacondescuento;
+descuentoaplicado = (cantdescuento/ventasindescuento)*100;
+caut<< descuentoaplicado;
+
+
+int cantminutos,hora;
+float minrestantes;
+cout<<"Ingresar cantidad de minutos";
+cin>> cantminutos;
+hora = cantminutos/60;
+minrestantes = cantminutos%60;
+
+cout<<"La cantidad de horas es" +to_string(hora)  + "la cantidad de minutos es"+ to_string(minrestantes);
+
+int horas,dias,horasrestantes;
+
+cout<<"Ingresar cant de horas";
+cin>> horas;
+
+dias = horas/24;
+horasrestantes = dias % 24;
+
+cout<<"La cantidad de dias son : " +to_string(dias) + "cantidad de horas restantes:" + to_string(horasrestantes);
+
+int canthuevos,cajas,sueltos,total;
+
+cout<<"ingresar cantidad de huevos";
+cin>>canthuevos;
+
+cajas = canthuevos/12;
+
+sueltos = canthuevos%12;
+
+total = (cajas*100)+(sueltos*12);
+
+cout<<"el total a pagar es de:"+to_string(total);
+
+
+int importe, billetea,billeteb,billetec,billeted;
+cout<<"ingresar monto a retirar";
+cin>>importe;
+
+billetea= importe/1000;
+importe = importe % 1000;
+
+billeteb= importe/500;
+importe = importe % 500;
+
+billetec= importe/200;
+importe = importe % 200;
+
+billetec= importe/100;
+importe = importe % 100;
+
+cout<<"Se deberán entregar"+ to_string(billetea)+ "billetes de $1.000" +to_string(billeteb)+ "billetes de $500,"+to_string(billetec)+ "billetes de $200, y"+ to_string(billeted)+ "billetes de $100.";
+
+
+
+int importedecompra,descuento,impsindescuento;
+float impcondescuento;
+
+cout<<"ingresar importe de compra";
+cin>> importedecompra;
+cout<<"ingresar descuento";
+cin>> descuento;
+
+impsindescuento = importedecompra;
+impcondescuento = (descuento/importedecompra)*100;
+
+cout<<"importe sin descuento es;" + to_string(impsindescuento)<<endl;
+cout<<"importe con descuento es:" + to_string(impcondescuento)<<endl;
+cout<<"el descuento es:"+ to_string(descuento)<<endl;
+*/
+
+
+
+
+
+
+}
